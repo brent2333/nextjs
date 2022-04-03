@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import Image from 'next/image'
 const Nav = () => (
     <header id="sidebar">
   <div className="side-menu-wrapper">
     <div className="top-logo">
       <Link href="/">
-        <img src="/img/driven.svg" />
+        <Image src="/img/driven.svg" />
       </Link>
     </div>
 
