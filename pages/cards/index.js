@@ -27,7 +27,6 @@ export default ManageCards;
 export async function getServerSideProps() {
     const res = await fetch(`${process.env.API_URL}/api/cards`)
     const {data} = await res.json()
-    console.log(data)
     return {
       props: {cards: data}
     }

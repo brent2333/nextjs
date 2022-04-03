@@ -1,4 +1,4 @@
-const cards = [
+[
     {
       "Alias": "3424",
       "CardId": "6077297",
@@ -508,4 +508,3 @@ const cards = [
       "cardTrackingUrl": null
     }
   ]
-  module.exports = cards
