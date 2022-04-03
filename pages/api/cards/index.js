@@ -1,5 +1,5 @@
 import nc from 'next-connect'
-import cards from '../../../public/cards.json'
+import cards from '../../../public/cards'
 const UIStatus = {
     ACTIVE: "active",
     EXPIRED: "expired",

@@ -1,4 +1,4 @@
-[
+const cards = [
     {
       "Alias": "3424",
       "CardId": "6077297",
@@ -508,3 +508,4 @@
       "cardTrackingUrl": null
     }
   ]
+  export default cards;
