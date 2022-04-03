@@ -5,7 +5,7 @@ const Nav = () => (
   <div className="side-menu-wrapper">
     <div className="top-logo">
       <Link href="/">
-        <Image src="/img/driven.svg" />
+        <Image src="/img/driven.svg"  width={150} height={100} />
       </Link>
     </div>
 
