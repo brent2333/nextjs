@@ -3,7 +3,7 @@ import { AgGridReact, AgGridColumn } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
-export default ({cards}) => {
+const ManageCards = ({cards}) => {
     return (
         <div>
         <h1>Manage Cards</h1>
@@ -22,8 +22,10 @@ export default ({cards}) => {
     )
 }
 
+export default ManageCards;
+
 export async function getServerSideProps() {
-    const res = await fetch(`http://localhost:3000/api/cards`)
+    const res = await fetch(`${process.env.API_URL}/api/cards`)
     const {data} = await res.json()
     console.log(data)
     return {

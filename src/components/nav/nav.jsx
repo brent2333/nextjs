@@ -3,17 +3,17 @@ const Nav = () => (
     <header id="sidebar">
   <div className="side-menu-wrapper">
     <div className="top-logo">
-      <a href="/">
+      <Link href="/">
         <img src="/img/driven.svg" />
-      </a>
+      </Link>
     </div>
 
     <ul>
       <li className="no-selection account-info-top">
-        <a href="" className="user-icon">
+        <span href="" className="user-icon">
           <span className="menu-icon user-picture">AM</span>
           <span className="menu-text"><span className="user-name">arco manager</span>
-        </span></a>
+        </span></span>
         <div className="mega-menu-trigger single-account">
           <div>
             <div className="account-name" title="PRAGYA VYAS">PRAGYA VYAS</div>
