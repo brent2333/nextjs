@@ -24,7 +24,7 @@ const ManageCards = ({cards}) => {
 
 export default ManageCards;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const res = await fetch(`${process.env.API_URL}/api/cards`)
     const {data} = await res.json()
     return {
