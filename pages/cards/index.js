@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import Toggle from '../../src/components/toggle';
 import { AgGridReact, AgGridColumn } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
@@ -9,13 +10,18 @@ const ManageCards = ({cards}) => {
         <h1>Manage Cards</h1>
         <div className="ag-theme-alpine" style={{height: 600, width: 1200}}>
            <AgGridReact
+           frameworkComponents={{
+            'toggle': Toggle,
+            }}
                rowData={cards}>
-                <AgGridColumn field="Status"></AgGridColumn>
-                <AgGridColumn field="Card"></AgGridColumn>
-                <AgGridColumn field="Fleet"></AgGridColumn>
-                <AgGridColumn field="Profile"></AgGridColumn>
-                <AgGridColumn field="VehicleID"></AgGridColumn>
-                <AgGridColumn field="LastUsed"></AgGridColumn>
+                <AgGridColumn 
+                field="Status"
+                cellRenderer="toggle"></AgGridColumn>
+                <AgGridColumn field="Card" sortable={ true } filter={ true }></AgGridColumn>
+                <AgGridColumn field="Fleet" sortable={ true } filter={ true }></AgGridColumn>
+                <AgGridColumn field="Profile" sortable={ true } filter={ true }></AgGridColumn>
+                <AgGridColumn field="VehicleID" sortable={ true } filter={ true }></AgGridColumn>
+                <AgGridColumn field="LastUsed" sortable={ true } filter={ true }></AgGridColumn>
            </AgGridReact>
        </div>
         </div>
