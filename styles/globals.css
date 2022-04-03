@@ -77,8 +77,8 @@ h1 {
   width: 100%;
 }
 #sidebar .side-menu-wrapper ul li {
-  font-family: AvertaStdPE-Semibold, sans-serif;
-  font-size: 16px;
+  /* font-family: AvertaStdPE-Semibold, sans-serif; */
+  font-size: 20px;
   padding: 20px;
   position: relative;
   display: flex;
@@ -128,10 +128,10 @@ h1 {
   gap: 0.5rem;
 }
 .user-name {
-  font-family: AvertaStdPE-Semibold, sans-serif;
+  /* font-family: AvertaStdPE-Semibold, sans-serif; */
 }
 .account-name {
-  font-family: AvertaStdPE-Regular, sans-serif;
+  /* font-family: AvertaStdPE-Regular, sans-serif; */
 }
 #sidebar .side-menu-wrapper .user-picture {
   display: flex;
@@ -161,6 +161,23 @@ h1 {
   box-shadow: 0 1px 8px 0 #999, 0 3px 3px -2px #999;
   text-align: center;
   grid-column: 1 / 2;
+}
+.dashboard .account-overview .account-header {
+  display: flex;
+  padding: 0 0.1875rem 0 0;
+}
+.dashboard .account-overview .account-header h2 {
+  flex: 2;
+}
+.dashboard .account-overview h2 {
+  text-align: left;
+}
+.dashboard h2 {
+  font-family: AvertaStdPE-Semibold, sans-serif;
+  font-size: 1rem;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
 }
 .dashboard .recent-activity {
   padding: 1.5rem;
@@ -297,4 +314,15 @@ h1 {
   .big-chip.active {
     background: rgb(36, 173, 118);
     color: #fff;
+}
+
+a.btn-primary, input.btn-primary, button.btn-primary {
+  /* font-family: var(--font-regular); */
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  padding: 0.875rem 1.5rem;
+  background: #000;
+  border: 0;
+  border-radius: 1.5rem;
 }
