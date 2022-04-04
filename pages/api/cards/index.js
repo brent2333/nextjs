@@ -44,7 +44,7 @@ const statusMap =  {
   };
 
 
-const tableCards = cards.map(card => {
+cards.map(card => {
     card.Status = statusMap[card.Status]
     card.Card = card.Title + ' ' + card.LastFour
     card.Fleet = 'VILLAGE OF HOLMEN POLICE DEPT 608721'
@@ -53,7 +53,6 @@ const tableCards = cards.map(card => {
     card.LastUsed = card.LastUpdatedDate.split('T')[0]
     card.CardType = card.cardType.title
 })
-console.log('tableCards', tableCards);
 const handler = nc()
   .get((req, res) => {
     res.json({data: cards})

@@ -1,3 +1,4 @@
+
 import Link from 'next/link'
 import Image from 'next/image'
 const Nav = () => (
@@ -5,7 +6,7 @@ const Nav = () => (
   <div className="side-menu-wrapper">
     <div className="top-logo">
       <Link href="/">
-        <Image src="/img/driven.svg"  width={150} height={100} />
+        <a><Image src="/img/driven.svg"  width={150} height={100} /></a>
       </Link>
     </div>
 

@@ -175,9 +175,29 @@ h1 {
 .dashboard h2 {
   font-family: AvertaStdPE-Semibold, sans-serif;
   font-size: 1rem;
+  text-align: left;
+  margin-left: 1rem !important;
   color: #000;
   text-transform: uppercase;
   margin: 0 0 1rem 0;
+}
+.dashboard .account-overview h4 {
+  /* font-family: var(--font-regular); */
+  font-size: 3.375rem;
+  font-weight: normal;
+  margin: 0 0 0.5rem 0;
+}
+.dashboard .account-overview .account-header .active-cards div:first-child {
+  width: 2.5rem;
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.1875rem 0;
+  background-color: black;
+  border-radius: 0.9375rem;
+}
+hr {
+  border: 1px solid #ddd
 }
 .dashboard .recent-activity {
   padding: 1.5rem;
@@ -316,7 +336,7 @@ h1 {
     color: #fff;
 }
 
-a.btn-primary, input.btn-primary, button.btn-primary {
+.btn-primary {
   /* font-family: var(--font-regular); */
   font-size: 1rem;
   color: #fff;
@@ -325,4 +345,28 @@ a.btn-primary, input.btn-primary, button.btn-primary {
   background: #000;
   border: 0;
   border-radius: 1.5rem;
+}
+
+footer .footer-desktop {
+  display: grid;
+  height: 3.75rem;
+  font-size: 0.875rem;
+  padding-top: 0.8125rem;
+  border-top: 0.0625rem solid #ddd;
+  grid-template-columns: auto auto;
+}
+footer .footer-desktop .footer-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  /* font-family: var(--font-semibold); */
+  color: black;
+  text-align: right;
+}
+footer .footer-desktop .footer-links a {
+  text-decoration: underline;
+  padding: 0 0.75rem;
+}
+footer .footer-desktop .footer-links a:first-child {
+  padding-left: 0;
 }
