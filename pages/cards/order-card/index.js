@@ -8,15 +8,17 @@ import {
     ShippingMethod,
     ReviewOrder
   } from "../../../src/components/order-card/forms";
-
+  import { FormProvider } from '../../../context'
+ 
   const OrderCards = () => {
     const [formStep, setFormStep] = useState(0);
     const nextFormStep = () => setFormStep((currentStep) => currentStep + 1);
 
     const prevFormStep = () => setFormStep((currentStep) => currentStep - 1);
 
-    return    (
+    return (
     <div>
+      <FormProvider>
     <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
       {formStep >= 0 && (
         <CardSettings formStep={formStep} nextFormStep={nextFormStep} />
@@ -27,11 +29,14 @@ import {
       {formStep >= 2 && (
         <DeliveryAddress formStep={formStep} nextFormStep={nextFormStep} />
       )}
-        {formStep >= 3 && (
+      {formStep >= 3 && (
         <ShippingMethod formStep={formStep} nextFormStep={nextFormStep} />
       )}
-      {formStep > 4 && <ReviewOrder />}
+      {formStep === 4 && (
+        <ReviewOrder formStep={formStep} />
+      )}
     </FormCard>
+    </FormProvider>
   </div>
     )
 
