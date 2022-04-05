@@ -23,22 +23,27 @@ const Nav = () => (
           <icon className="icon-font icon-arrow-right"></icon>
         </div>
       </li>
-      <li data-pm-id="pm01" className="current selected">
+      <li className="current selected">
       <Link href="/">
         <a>Dashboard</a>
       </Link>  
       </li>
-      <li data-pm-id="pm03" id="activity-menu">
+      <li id="activity-menu">
       <Link href="/spend">
         <a>Spend</a>
       </Link>        
       </li>
-      <li data-pm-id="pm03" id="activity-menu">
+      <li id="activity-menu">
       <Link href="/cards">
         <a>Manage Cards</a>
       </Link>        
       </li>
-      <li data-pm-id="pm03" id="activity-menu">
+      <li id="activity-menu">
+      <Link href="/cards/order-card">
+        <a>Order Card</a>
+      </Link>        
+      </li>
+      <li id="activity-menu">
       <Link href="/reports">
         <a>My Reports</a>
       </Link>        
