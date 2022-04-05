@@ -6,13 +6,19 @@ import { useFormContext } from "../../../../context"
 export default function ReviewOrder({ formStep, nextFormStep }) {
   const { data } = useFormContext();
   const formRef = useRef();
-
+  const formData = data;
   async function handleSubmit(data) {
     try {
     //   formRef.current.setErrors({});
     // Validation passed - do something with data
-      setFormValues(data);
-      nextFormStep();
+      const resp = await fetch('/api/cards/order',{
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      const data = await resp.json();
     } catch (err) {
       const errors = {};
     }
